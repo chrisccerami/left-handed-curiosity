@@ -1,0 +1,7 @@
+{{#each rovers as |rover|}}
+  <li class="rover">
+    {{yield rover}}
+  </li>
+{{else}}
+  {{yield to='inverse'}}
+{{/each}}

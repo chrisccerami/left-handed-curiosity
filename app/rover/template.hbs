@@ -1,0 +1,25 @@
+<ul id="sidebar">
+  {{#rover-list rovers=model as |rover|}}
+    {{#link-to 'rover.rover' rover.name (query-params sol=rover.max_sol)}}
+      {{rover.name}} - Landing Date: {{rover.landing_date}}
+    {{/link-to}}
+    <div>
+      Photos in collection: {{rover.total_photos}}
+    </div>
+    <div>
+      Most Recent Photos:
+      <div>
+        Earth Date: {{rover.max_date}}
+      </div>
+      <div>
+        Martian Sol: {{rover.max_sol}}
+      </div>
+    </div>
+  {{else}}
+    No Rovers Found
+  {{/rover-list}}
+</ul>
+
+<div id="main">
+  {{outlet}}
+</div>
