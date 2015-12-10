@@ -1,0 +1,21 @@
+<ul id="sidebar">
+  {{#each model as |rover|}}
+    <li>
+      {{rover.name}} - Landing Date: {{rover.landing_date}}
+      <div>
+        Photos in collection: {{rover.total_photos}}
+      </div>
+      <div>
+        Most Recent Photos:
+        <div>
+          Earth Date: {{rover.max_date}}
+        </div>
+        <div>
+          Martian Sol: {{rover.max_sol}}
+        </div>
+      </div>
+    </li>
+  {{else}}
+    No Rovers Found
+  {{/each}}
+</ul>
