@@ -12,3 +12,11 @@
   margin-left: 300px;
   width: calc(100% - 270px);
 }
+
+.photo {
+  width: 500px;
+}
+
+.photo-list-item {
+  list-style: none;
+}

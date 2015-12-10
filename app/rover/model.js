@@ -4,6 +4,7 @@ import DS from 'ember-data';
 const {
   Model,
   attr,
+  hasMany
 } = DS;
 
 export default Model.extend({
@@ -11,5 +12,6 @@ export default Model.extend({
   landing_date: attr('date'),
   max_sol: attr('number'),
   max_date: attr('date'),
-  total_photos: attr('number')
+  total_photos: attr('number'),
+  photos: hasMany('photo')
 });

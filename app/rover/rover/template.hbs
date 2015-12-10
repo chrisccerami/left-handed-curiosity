@@ -1,1 +1,19 @@
-{{model.name}}
+{{model.rover.name}}
+<p>
+  <div>Sol</div>
+  {{input name="sol" action="updateSol" on="key-up"}}
+  <div>Earth Date</div>
+  {{input name="earth_date" action="updateEarthDate" on="key-up"}}
+  <div>Camera</div>
+  {{input name="camera" action="updateCamera" on="key-up"}}
+</p>
+
+<ul>
+  {{#each model.photos as |photo|}}
+    <li class="photo-list-item">
+      <img src="{{photo.img_src}}" class="photo">
+    </li>
+  {{else}}
+    No Photos Found
+  {{/each}}
+</ul>

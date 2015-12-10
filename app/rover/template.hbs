@@ -1,6 +1,6 @@
 <ul id="sidebar">
   {{#rover-list rovers=model as |rover|}}
-    {{#link-to 'rover.rover' rover}}
+    {{#link-to 'rover.rover' rover.name (query-params sol=rover.max_sol)}}
       {{rover.name}} - Landing Date: {{rover.landing_date}}
     {{/link-to}}
     <div>
